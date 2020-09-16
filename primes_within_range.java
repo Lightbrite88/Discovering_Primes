@@ -1,8 +1,9 @@
 import java.util.ArrayList;
 import java.util.Scanner;
-public class primes_within_range {
-
-	public static void main(String[] args) {
+	public class primes_within_range {public static void main(String[] args) {
+		primes();
+	}
+	public static void primes() {
 		//open input scanner
 		Scanner in = new Scanner(System.in);
 		//Defensive program for selection between range and amount
@@ -14,9 +15,14 @@ public class primes_within_range {
 				choice = in.nextInt();
 				if (choice == 1 || choice == 2){
 					isGoodInput=true;
+				} else {
+					System.out.println("Invalid input for choice. Please try again:");
+					continue;	
 				}
 			} catch (java.util.InputMismatchException e) {
-				System.out.println("Invalid input for value from minimum prime. Please try again:");
+				System.out.println("Invalid input for choice. Please try again:");
+				in.next();
+				continue;
 			}
 		}
 		if (choice == 1){
