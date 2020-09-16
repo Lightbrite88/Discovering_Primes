@@ -104,6 +104,7 @@ import java.util.Scanner;
 					System.out.println("Start point set to 2.");
 					start = 2;
 				}
+				//catching input exceptions
 			} catch (java.util.InputMismatchException e) {
 				System.out.println("Invalid input for starting value.");
 				System.out.println("Start point set to 2.");
